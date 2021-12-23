@@ -100,6 +100,9 @@ return packer.startup(function(use)
 
   -- Debugger
   use "puremourning/vimspector"
+
+  -- For 42 
+  use "42Paris/42header"
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
