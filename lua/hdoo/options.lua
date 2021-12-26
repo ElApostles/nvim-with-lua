@@ -12,7 +12,8 @@ local options = {
   showmode = true,                         -- we don't need to see things like -- INSERT -- anymore
   showtabline = 2,                         -- always show tabs
   smartcase = true,                        -- smart case
-  smartindent = true,                      -- make indenting smarter again
+  cindent = true,
+  autoindent = true,					   -- Uses indentation of previous line
   splitbelow = true,                       -- force all horizontal splits to go below current window
   splitright = true,                       -- force all vertical splits to go to the right of current window
   swapfile = false,                        -- creates a swapfile
@@ -42,3 +43,5 @@ end
 
 vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
+vim.cmd "set foldmethod=marker"
+vim.cmd "set foldmarker={{{,}}}"
