@@ -8,7 +8,7 @@ Make sure to remove or move your current `nvim` directory
 
 **IMPORTANT** requires `Neovim 0.6 release` version
 ```
-git clone https://github.com/ElApostles/nvim-with-lua ~/.config/nvim
+git clone https://github.com/ElApostles/nvim-with-lua.git ~/.config/nvim
 ```
 
 Run `nvim` and wait for the plugins to be installed 
