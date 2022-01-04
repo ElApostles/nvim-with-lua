@@ -9,6 +9,7 @@ local keymap = vim.api.nvim_set_keymap
 keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
+vim.g.vimspector_enable_mappings = 'HUMAN'
 
 -- Modes
 --   normal_mode = "n",
@@ -39,8 +40,8 @@ keymap("n", "<S-l>", ":bnext<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 
 -- Move text up and down
-keymap("n", "<A-j>", "<Esc>:m .+1<CR>==gi", opts)
-keymap("n", "<A-k>", "<Esc>:m .-2<CR>==gi", opts)
+keymap("n", "<A-k>", "<Esc>:m .-2<CR>", opts)
+keymap("n", "<A-j>", "<Esc>:m .+1<CR>", opts)
 
 -- Insert --
 -- Press jk fast to enter
@@ -69,4 +70,14 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 -- keymap("t", "<C-j>", "<C-\\><C-N><C-w>j", term_opts)
 -- keymap("t", "<C-k>", "<C-\\><C-N><C-w>k", term_opts)
 -- keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
+
+
+-- vimspector
+keymap("n", "<leader>dd", ":call vimspector#Launch()<CR>", opts)
+keymap("n", "<leader>dx", ":VimspectorReset<CR>", opts)
+keymap("n", "<Leader>di", "<Plug>VimspectorBalloonEval", opts)
+keymap("n", "<leader>de", ":VimspectorEval", opts)
+keymap("n", "<leader>dw", ":VimspectorWatch", opts)
+keymap("n", "<leader>do", ":VimspectorShowOutput", opts)
+keymap("n", "<leader>dc", ":!cc -g -I./libft/libft.h -L./libft/ -lft % -o main<CR>", opts)
 
