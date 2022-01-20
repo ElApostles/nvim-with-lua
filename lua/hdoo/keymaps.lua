@@ -73,11 +73,11 @@ keymap("x", "<A-k>", ":move '<-2<CR>gv-gv", opts)
 
 
 -- vimspector
-keymap("n", "<leader>dd", ":call vimspector#Launch()<CR>", opts)
-keymap("n", "<leader>dx", ":VimspectorReset<CR>", opts)
-keymap("n", "<Leader>di", "<Plug>VimspectorBalloonEval", opts)
-keymap("n", "<leader>de", ":VimspectorEval", opts)
-keymap("n", "<leader>dw", ":VimspectorWatch", opts)
-keymap("n", "<leader>do", ":VimspectorShowOutput", opts)
-keymap("n", "<leader>dc", ":!cc -g -I./libft/libft.h -L./libft/ -lft % -o main<CR>", opts)
+keymap("n", ";dd", ":call vimspector#Launch()<CR>", opts)
+keymap("n", ";dx", ":VimspectorReset<CR>", opts)
+keymap("n", ";di", "<Plug>VimspectorBalloonEval", opts)
+keymap("n", ";de", ":VimspectorEval", opts)
+keymap("n", ";dw", ":VimspectorWatch", opts)
+keymap("n", ";do", ":VimspectorShowOutput", opts)
+keymap("n", ";dc", ":!cc -g -I./libft/libft.h -L./libft/ -lft % -o main<CR>", opts)
 

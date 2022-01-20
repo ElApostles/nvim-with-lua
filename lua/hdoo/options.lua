@@ -45,3 +45,4 @@ vim.cmd "set whichwrap+=<,>,[,],h,l"
 vim.cmd [[set iskeyword+=-]]
 vim.cmd "set foldmethod=marker"
 vim.cmd "set foldmarker={{{,}}}"
+vim.cmd "set sua+=.c"
