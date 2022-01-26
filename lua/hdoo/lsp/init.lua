@@ -5,4 +5,4 @@ end
 
 require "hdoo.lsp.lsp-installer"
 require("hdoo.lsp.handlers").setup()
-require "hdoo.lsp.null-ls"
+-- require "hdoo.lsp.null-ls"

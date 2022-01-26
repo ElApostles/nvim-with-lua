@@ -13,7 +13,6 @@ null_ls.setup({
 	sources = {
 		formatting.prettier.with({ extra_args = { "--no-semi", "--single-quote", "--jsx-single-quote" } }),
 		formatting.black.with({ extra_args = { "--fast" } }),
-		formatting.clang_format.with({ extra_args = { "-assume-filename", "$FILENAME" }}),
 		formatting.stylua,
 	},
 })
