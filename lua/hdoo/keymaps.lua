@@ -10,6 +10,8 @@ keymap("", "<Space>", "<Nop>", opts)
 vim.g.mapleader = " "
 vim.g.maplocalleader = " "
 vim.g.vimspector_enable_mappings = 'HUMAN'
+vim.g.user42 = 'hdoo'
+vim.g.mail42 = 'hdoo@student.42seoul.kr'
 
 -- Modes
 --   normal_mode = "n",
