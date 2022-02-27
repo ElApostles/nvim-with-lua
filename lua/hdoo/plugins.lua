@@ -100,9 +100,6 @@ return packer.startup(function(use)
   -- Git
   use "lewis6991/gitsigns.nvim"
 
-  -- Debugger
-  use "puremourning/vimspector"
-
   -- For 42
   use "42Paris/42header"
   -- Automatically set up your configuration after cloning packer.nvim
