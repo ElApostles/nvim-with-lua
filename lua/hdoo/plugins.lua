@@ -102,6 +102,18 @@ return packer.startup(function(use)
 
   -- For 42
   use "42Paris/42header"
+
+  -- Mark down
+  use {
+    "nvim-neorg/neorg",
+    config = function()
+        require('neorg').setup {
+			tag = "*"
+        }
+    end,
+    requires = "nvim-lua/plenary.nvim"
+  }
+  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
