@@ -4,7 +4,7 @@ if not status_ok then
   return
 end
 
-npairs.setup {
+npairs.setup ({
   check_ts = true,
   ts_config = {
     lua = { "string", "source" },
@@ -25,7 +25,7 @@ npairs.setup {
     highlight = "Search",
     highlight_grey = "Comment",
   },
-}
+})
 
 local cmp_autopairs = require "nvim-autopairs.completion.cmp"
 local cmp_status_ok, cmp = pcall(require, "cmp")
