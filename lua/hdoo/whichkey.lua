@@ -181,6 +181,13 @@ local mappings = {
     h = { "<cmd>ToggleTerm size=10 direction=horizontal<cr>", "Horizontal" },
     v = { "<cmd>ToggleTerm size=80 direction=vertical<cr>", "Vertical" },
   },
+
+  n = {
+	  name = "Neorg",
+	  c = { "<cmd>Neorg gtd capture<cr>", "Capture"},
+	  e = { "<cmd>Neorg gtd edit<cr>", "Edit"},
+	  v = { "<cmd>Neorg gtd views<cr>", "Views"},
+  }
 }
 
 which_key.setup(setup)

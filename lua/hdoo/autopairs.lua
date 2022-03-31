@@ -4,7 +4,7 @@ if not status_ok then
   return
 end
 
-npairs.setup {
+npairs.setup ({
   check_ts = true,
   enable_check_bracket_line = false,
   ignored_next_char = "[%w%.]",
@@ -20,7 +20,7 @@ npairs.setup {
     highlight = "Search",
     highlight_grey = "Comment",
   },
-}
+})
 
 local Rule = require('nvim-autopairs.rule')
 local ts_conds = require('nvim-autopairs.ts-conds')

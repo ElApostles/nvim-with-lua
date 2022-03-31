@@ -3,8 +3,8 @@ require('neorg').setup {
         ["core.defaults"] = {},
 		["core.gtd.base"] = {
 			config = {
-				workspace = "work"
-			}
+				workspace = "work",
+			},
 		},
 		["core.norg.completion"] = {
 			config = {
