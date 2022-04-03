@@ -31,7 +31,7 @@ local options = {
   signcolumn = "yes",                      -- always show the sign column, otherwise it would shift the text each time
   -- scrolloff = 8,                           -- is one of my fav
   sidescrolloff = 8,
-  guifont = "monospace:h17"               -- the font used in graphical neovim applications
+  guifont = "monospace:h17",               -- the font used in graphical neovim applications
 }
 
 vim.opt.shortmess:append "c"
@@ -45,3 +45,4 @@ vim.cmd [[set iskeyword+=-]]
 vim.cmd "set foldmethod=marker"
 vim.cmd "set foldmarker={{{,}}}"
 vim.cmd "set sua+=.c"
+vim.cmd "set nofixendofline"
