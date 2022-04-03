@@ -114,6 +114,17 @@ return packer.startup(function(use)
     end,
     requires = "nvim-lua/plenary.nvim"
   }
+
+  -- Auto Session
+	use {
+	  'rmagatti/auto-session',
+	  config = function()
+		require('auto-session').setup {
+		  log_level = 'info',
+		  auto_session_suppress_dirs = {'~/', '~/Projects'}
+		}
+	  end
+	}
   
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
