@@ -8,6 +8,23 @@ if not snip_status_ok then
   return
 end
 
+-- local snip_status_ok, snippy = pcall(require, "snippy")
+-- if not snip_status_ok then
+--   return
+-- end
+--
+-- require('snippy').setup({
+--     mappings = {
+--         is = {
+--             ['<Tab>'] = 'expand_or_advance',
+--             ['<S-Tab>'] = 'previous',
+--         },
+--         nx = {
+--             ['<leader>x'] = 'cut_text',
+--         },
+--     },
+-- })
+
 require("luasnip/loaders/from_vscode").lazy_load()
 
 local check_backspace = function()
@@ -49,7 +66,6 @@ local kind_icons = {
 local cmp_autopairs = require('nvim-autopairs.completion.cmp')
 cmp.event:on( 'confirm_done', cmp_autopairs.on_confirm_done({  map_char = { tex = '' } }))
 
-
 -- add a lisp filetype (wrap my-function), FYI: Hardcoded = { "clojure", "clojurescript", "fennel", "janet" }
 cmp_autopairs.lisp[#cmp_autopairs.lisp+1] = "racket"
 
@@ -59,7 +75,12 @@ cmp.setup {
   snippet = {
     expand = function(args)
       luasnip.lsp_expand(args.body) -- For `luasnip` users.
+      -- snippy.expand_snippet(args.body) -- For `luasnip` users.
     end,
+  },
+  window = {
+     completion = cmp.config.window.bordered(),
+     documentation = cmp.config.window.bordered(),
   },
   mapping = {
     ["<C-k>"] = cmp.mapping.select_prev_item(),
@@ -128,9 +149,6 @@ cmp.setup {
   confirm_opts = {
     behavior = cmp.ConfirmBehavior.Replace,
     select = false,
-  },
-  documentation = {
-    border = { "╭", "─", "╮", "│", "╯", "─", "╰", "│" },
   },
   experimental = {
     ghost_text = false,
