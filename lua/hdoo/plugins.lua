@@ -77,7 +77,7 @@ return packer.startup(function(use)
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-  use "honza/vim-snippets"
+  use 'honza/vim-snippets'
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
@@ -105,16 +105,6 @@ return packer.startup(function(use)
   -- For 42
   use "42Paris/42header"
 
-  -- Mark down
-  use {
-    "nvim-neorg/neorg",
-    config = function()
-        require('neorg').setup {
-			tag = "*"
-        }
-    end,
-    requires = "nvim-lua/plenary.nvim"
-  }
 
   -- Auto Session
 	use {
@@ -126,7 +116,6 @@ return packer.startup(function(use)
 		}
 	  end
 	}
-  
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
