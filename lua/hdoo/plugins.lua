@@ -83,7 +83,6 @@ return packer.startup(function(use)
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -105,17 +104,6 @@ return packer.startup(function(use)
   -- For 42
   use "42Paris/42header"
 
-
-  -- Auto Session
-	use {
-	  'rmagatti/auto-session',
-	  config = function()
-		require('auto-session').setup {
-		  log_level = 'info',
-		  auto_session_suppress_dirs = {'~/', '~/Projects'}
-		}
-	  end
-	}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
