@@ -114,6 +114,9 @@ return packer.startup(function(use)
   -- PDF reader
   use "makerj/vim-pdf"
 
+  -- Github copilot
+  use "github/copilot.vim"
+
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then
