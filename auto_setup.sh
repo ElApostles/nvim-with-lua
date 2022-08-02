@@ -8,4 +8,3 @@ brew install lazygit
 brew install ripgrep
 brew install fzf
 brew install cmake
-brew install llvm
