@@ -2,9 +2,11 @@ local status_ok, bufferline = pcall(require, "bufferline")
 if not status_ok then
   return
 end
+vim.opt.termguicolors = true
 
 bufferline.setup {
   options = {
+	mode = "buffers",
     numbers = "none", -- | "ordinal" | "buffer_id" | "both" | function({ ordinal, id, lower, raise }): string,
     close_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
     right_mouse_command = "Bdelete! %d", -- can be a string | function, see "Mouse actions"
@@ -55,7 +57,8 @@ bufferline.setup {
     --     return true
     --   end
     -- end,
-    offsets = { { filetype = "NvimTree", text = "", padding = 1 } },
+    offsets = { { filetype = "NvimTree", text = "", text_align = "left" } },
+	color_icons = true,
     show_buffer_icons = true,
     show_buffer_close_icons = true,
     show_close_icon = true,

@@ -73,17 +73,23 @@ return packer.startup(function(use)
   use "hrsh7th/cmp-cmdline" -- cmdline completions
   use "saadparwaiz1/cmp_luasnip" -- snippet completions
   use "hrsh7th/cmp-nvim-lsp"
+  use({
+    "jose-elias-alvarez/null-ls.nvim",
+    config = function()
+        require("null-ls").setup()
+    end,
+    requires = { "nvim-lua/plenary.nvim" },
+})
 
   -- snippets
   use "L3MON4D3/LuaSnip" --snippet engine
   use "rafamadriz/friendly-snippets" -- a bunch of snippets to use
-  use "honza/vim-snippets"
+  use 'honza/vim-snippets'
 
   -- LSP
   use "neovim/nvim-lspconfig" -- enable LSP
   use "williamboman/nvim-lsp-installer" -- simple to use language server installer
   use "tamago324/nlsp-settings.nvim" -- language server settings defined in json for
-  use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters
 
   -- Telescope
   use {'nvim-telescope/telescope-fzf-native.nvim', run = 'make' }
@@ -105,30 +111,9 @@ return packer.startup(function(use)
   -- For 42
   use "42Paris/42header"
 
-  -- Mark down
-  use {
-    "nvim-neorg/neorg",
-    config = function()
-        require('neorg').setup {
-			tag = "*"
-        }
-    end,
-    requires = "nvim-lua/plenary.nvim"
-  }
+  -- PDF reader
+  use "makerj/vim-pdf"
 
-  -- github copilot
-  use "github/copilot.vim"
-
-  -- Auto Session
-	use {
-	  'rmagatti/auto-session',
-	  config = function()
-		require('auto-session').setup {
-		  log_level = 'info',
-		  auto_session_suppress_dirs = {'~/', '~/Projects'}
-		}
-	  end
-	}
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins
   if PACKER_BOOTSTRAP then

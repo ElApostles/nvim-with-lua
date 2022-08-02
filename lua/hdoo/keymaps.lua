@@ -28,8 +28,7 @@ keymap("n", "<C-k>", "<C-w>k", opts)
 keymap("n", "<C-l>", "<C-w>l", opts)
 
 -- Function keys
-keymap("n", "<F2>", ":%w !pbcopy <CR>", opts)
-keymap("n", "<F5>", ":!clang -g -fsanitize=address % <CR> && <Space>tv", opts)
+-- keymap("n", "<F2>", ":%w !pbcopy <CR>", opts)
 
 -- Resize with arrows
 -- keymap("n", "<C-Up>", ":resize -2<CR>", opts)
