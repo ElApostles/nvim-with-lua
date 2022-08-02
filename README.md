@@ -25,7 +25,7 @@ if you want to write `c` code, `vim somthing.c` and run `:LspInstall`
 and install clangd.
 
 
-#Notice
+# Notice
 Now you can you lsp(language server protocol). it will do diagnostics, jump to and hover definition, and so on.
 
 Please enjoy Nvim world.
@@ -33,7 +33,7 @@ If you have any question to use this settings include plugins, Please find hdoo 
 Slack ID: hdoo in 42 network
 Email: tyeirdoo06@gmail.com
 
-#License
+# License
 The MIT License (MIT)
 
 Copyright (c) 2022 Hyeokjin Doo
